@@ -19,6 +19,9 @@ android:
     # SDK version to compile project
     - android-28
 
+before_script:
+  - bundle exec danger
+
 script:
   - ./gradlew build
 
