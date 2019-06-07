@@ -19,12 +19,12 @@ android:
     # SDK version to compile project
     - android-28
 
-before_script:
-  - bundle install
-  - bundle exec danger
-
 script:
   - ./gradlew build
+  - ./gradlew runKtlint
+  - ./gradlew lint
+  - bundle install
+  - bundle exec danger
 
 cache:
   directories:
