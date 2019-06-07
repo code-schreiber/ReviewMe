@@ -24,7 +24,7 @@ script:
 
 cache:
   directories:
-  - "$HOME/.m2"
-  - "$HOME/.m2/repository"
-  - "$HOME/.gradle"
-  - ".gradle"
+    - "$HOME/.m2"
+    - "$HOME/.m2/repository"
+    - "$HOME/.gradle"
+    - ".gradle"
