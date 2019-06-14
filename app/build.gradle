@@ -24,6 +24,7 @@ android {
 
 ktlint {
     android = true
+    ignoreFailures = true
     reporters = [ReporterType.PLAIN, ReporterType.CHECKSTYLE]
 }
 
