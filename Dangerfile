@@ -25,3 +25,8 @@ android_lint.skip_gradle_task = true
 android_lint.lint(inline_mode: true)
 # For projects with tons of warnings, you may want to filter only new/modified files
 # android_lint.filtering = true
+
+kotlin_detekt.report_file = "app/build/reports/detekt/detekt.xml"
+kotlin_detekt.skip_gradle_task = true
+# kotlin_detekt.filtering = true
+kotlin_detekt.detekt
