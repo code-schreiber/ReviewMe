@@ -16,12 +16,10 @@ warn("This PR is quite a big one! Try splitting this into separate tasks next ti
 
 message("Thank you for your work @#{github.pr_author} 🎉 You might find a few suggestions from me below 😉")
 
-# ktlint
-checkstyle_format.base_path = Dir.pwd
-checkstyle_format.report "app/build/reports/ktlint/ktlintMainSourceSetCheck.xml"
 
 # AndroidLint
-android_lint.report_file = "app/build/reports/lint-results.xml"
+android_lint.report_file = "app/build/reports/lint-results-debug.xml"
 android_lint.skip_gradle_task = true
-android_lint.severity = "Error"
+android_lint.severity = "Warning"
+android_lint.filtering = true
 android_lint.lint(inline_mode: true)
