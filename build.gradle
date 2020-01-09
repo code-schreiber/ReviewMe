@@ -28,3 +28,13 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task runChecksForDanger() {
+    group = "Reporting"
+    dependsOn 'ktlintCheck'
+
+    def file = file("${project.rootDir}/build/reports/ktlint")
+    if (!file.exists()) file.mkdirs()
+    def lintFile = new File("${project.rootDir}/build/reports/lint")
+    if (!lintFile.exists()) lintFile.mkdirs()
+}
