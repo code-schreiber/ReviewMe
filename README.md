@@ -2,7 +2,7 @@
 [![Author](https://img.shields.io/badge/Author-code--schreiber-1A237E.svg)](https://github.com/code-schreiber)
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![Build Status](https://travis-ci.org/code-schreiber/ReviewMe.svg?branch=master)](https://travis-ci.org/code-schreiber/ReviewMe) 
-  
+![CI](https://github.com/errysuprayogi/ReviewMe/workflows/CI/badge.svg?branch=workflows)![CI](https://github.com/errysuprayogi/ReviewMe/workflows/CI/badge.svg?branch=workflows)  
   
 <p align="center">
  <img src='https://avatars2.githubusercontent.com/u/51477052' width='100' height='100'/>
