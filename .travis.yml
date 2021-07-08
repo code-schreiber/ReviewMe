@@ -21,8 +21,9 @@ android:
 
 script:
   - ./gradlew build
-  - ./gradlew :app:ktlintCheck
-  - ./gradlew :app:lint
+  - ./gradlew detekt
+  - ./gradlew ktlintCheck
+  - ./gradlew lint
   - bundle install
   - bundle exec danger
 

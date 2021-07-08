@@ -1,12 +1,11 @@
+# Docs and setup at https://danger.systems
+
 # Sometimes it's a README fix, or something like that - which isn't relevant for
 # including in a project's CHANGELOG for example
 declared_trivial = github.pr_title.include? "#trivial"
 
 # Make it more obvious that a PR is a work in progress and shouldn't be merged yet
 warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
-
-# Warn when there is a big PR
-warn("Big PR") if git.lines_of_code > 500
 
 # Give a warning if the PR description is empty
 warn("Please provide a PR description") if github.pr_body.length < 5
@@ -23,5 +22,11 @@ checkstyle_format.report "app/build/reports/ktlint/ktlintMainSourceSetCheck.xml"
 # AndroidLint
 android_lint.report_file = "app/build/reports/lint-results.xml"
 android_lint.skip_gradle_task = true
-android_lint.severity = "Error"
 android_lint.lint(inline_mode: true)
+# For projects with tons of warnings, you may want to filter only new/modified files
+# android_lint.filtering = true
+
+kotlin_detekt.report_file = "app/build/reports/detekt/detekt.xml"
+kotlin_detekt.skip_gradle_task = true
+# kotlin_detekt.filtering = true
+kotlin_detekt.detekt

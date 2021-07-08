@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "org.jlleitschuh.gradle.ktlint"
+apply plugin: "io.gitlab.arturbosch.detekt"
 
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 
@@ -22,8 +23,13 @@ android {
     }
 }
 
+detekt {
+    config = files("default-detekt-config.yml")
+}
+
 ktlint {
     android = true
+    ignoreFailures = true
     reporters = [ReporterType.PLAIN, ReporterType.CHECKSTYLE]
 }
 
